@@ -49,6 +49,7 @@ body {
 .text-3-black {
   font-size: clamp(0.75rem, 0.662rem + 0.38vw, 1rem);
   letter-spacing: 0.25rem;
+  text-transform: uppercase;
   color: var(--cyan-600);
 }
 
@@ -66,7 +67,7 @@ body {
 .container {
   max-width: 70rem;
   margin-left: auto;
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-cyan,
@@ -215,9 +216,33 @@ body {
 
 /* About */
 .about {
+  padding: 2rem 2rem 4rem 2rem;
+
   .images-about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin: 4rem 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .text-about {
+    text-align: center;
+
+    h2 {
+      padding: 1rem 0 2rem 0;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .images-about {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
