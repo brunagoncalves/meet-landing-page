@@ -211,7 +211,7 @@ body {
     top: 3.5625rem;
   }
   .hero .text-hero {
-    padding: 0;
+    padding: 1.4375rem 0;
     z-index: 10;
     gap: 2rem;
   }
