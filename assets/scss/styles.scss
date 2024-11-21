@@ -141,6 +141,10 @@ body {
     display: block;
     max-width: 100%;
   }
+
+  @media (min-width: 70rem) {
+    padding: 5rem;
+  }
 }
 
 /* Hero */

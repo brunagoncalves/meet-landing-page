@@ -134,6 +134,11 @@ body {
   display: block;
   max-width: 100%;
 }
+@media (min-width: 70rem) {
+  .header {
+    padding: 5rem;
+  }
+}
 
 /* Hero */
 .hero {
