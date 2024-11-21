@@ -197,15 +197,18 @@ body {
     position: absolute;
     display: block;
     max-width: 100%;
+    height: auto;
   }
   .hero .img-left {
     left: -1.625rem;
     object-fit: cover;
+    bottom: 6rem;
   }
   .hero .img-right {
     order: 3;
     right: -1.625rem;
     object-fit: cover;
+    top: 6rem;
   }
   .hero .text-hero {
     padding: 0;

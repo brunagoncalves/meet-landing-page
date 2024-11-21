@@ -209,17 +209,20 @@ body {
       position: absolute;
       display: block;
       max-width: 100%;
+      height: auto;
     }
 
     .img-left {
       left: -1.625rem;
       object-fit: cover;
+      bottom: 6rem;
     }
 
     .img-right {
       order: 3;
       right: -1.625rem;
       object-fit: cover;
+      top: 6rem;
     }
 
     .text-hero {
