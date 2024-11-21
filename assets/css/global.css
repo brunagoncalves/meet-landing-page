@@ -111,10 +111,11 @@ body {
   align-items: center;
 }
 .number-line .number {
-  padding: 1rem 1.1875rem;
+  padding: 1rem;
   border: 1px solid var(--slate-300);
   border-radius: 50%;
   background-color: var(--white);
+  color: var(--slate-600);
 }
 .number-line .line {
   width: 1px;
@@ -174,23 +175,35 @@ body {
 }
 @media (min-width: 70rem) {
   .hero {
+    position: relative;
     flex-direction: row;
     gap: 2rem;
     padding: 4rem 0;
+    margin: 0;
+    overflow-x: hidden;
   }
   .hero .img-mobile {
     display: none;
   }
   .hero .img-left,
   .hero .img-right {
+    position: absolute;
     display: block;
     max-width: 100%;
   }
+  .hero .img-left {
+    left: -1.625rem;
+    object-fit: cover;
+  }
   .hero .img-right {
     order: 3;
+    right: -1.625rem;
+    object-fit: cover;
   }
   .hero .text-hero {
     padding: 0;
+    z-index: 10;
+    gap: 2rem;
   }
   .hero .text-hero .buttons {
     flex-direction: row;
@@ -238,54 +251,76 @@ body {
 /* Footer */
 .footer {
   width: 100%;
-  overflow: hidden;
 }
 .footer .number-line {
-  margin-bottom: -1.5625rem;
+  position: relative;
+  z-index: 3;
 }
 .footer .footer-content {
-  display: flex;
-  flex-direction: column; /* Organiza elementos verticalmente */
-  align-items: center;
-  justify-content: center;
   position: relative;
+  margin-top: -1.6875rem;
 }
-.footer .footer-content .overlay {
+.footer .footer-content::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--cyan-600);
+  right: 0;
+  bottom: 0;
+  background-color: var(--cyan-600);
   opacity: 0.75;
-  z-index: 1;
+  z-index: 2;
 }
 .footer .footer-content .img-footer {
-  position: relative;
+  width: 100%;
 }
 .footer .footer-content .img-footer .image {
+  position: absolute;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 .footer .footer-content .text-footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 1.5rem;
   padding: 4rem 2rem;
-  z-index: 1;
+  gap: 1.5rem;
+  text-align: center;
+  z-index: 3;
 }
 .footer .footer-content .text-footer h2,
 .footer .footer-content .text-footer p {
   color: var(--white);
 }
+@media (min-width: 48rem) {
+  .footer .footer-content .text-footer {
+    max-width: 31.5rem;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 70rem) {
   .footer .footer-content .text-footer {
     flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 7rem 5rem;
+    max-width: 70rem;
     margin: 0 auto;
+  }
+  .footer .footer-content .text-footer h2 {
+    text-align: initial;
+    max-width: 28.4375rem;
+  }
+  .footer .footer-content .text-footer p {
+    max-width: 22.1875rem;
+  }
+  .footer .footer-content .text-footer a {
+    margin-left: 3.9375rem;
   }
 }
 
