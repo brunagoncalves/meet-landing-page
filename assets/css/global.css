@@ -21,7 +21,7 @@
 body {
   font-family: var(--font-primary);
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 /* Global Styles */
@@ -202,13 +202,13 @@ body {
   .hero .img-left {
     left: -1.625rem;
     object-fit: cover;
-    bottom: 3.5625rem;
+    top: 3.5625rem;
   }
   .hero .img-right {
     order: 3;
     right: -1.625rem;
     object-fit: cover;
-    top: 3.5625rem;
+    bottom: 3.5625rem;
   }
   .hero .text-hero {
     padding: 1.4375rem 0;
@@ -262,14 +262,15 @@ body {
 .footer {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .footer .number-line {
   position: relative;
   z-index: 3;
+  margin-bottom: -1.6875rem;
 }
 .footer .footer-content {
   position: relative;
-  margin-top: -1.6875rem;
 }
 .footer .footer-content::before {
   content: "";

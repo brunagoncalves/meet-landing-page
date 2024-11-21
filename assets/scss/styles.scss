@@ -21,7 +21,7 @@
 body {
   font-family: var(--font-primary);
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 /* Global Styles */
@@ -215,14 +215,14 @@ body {
     .img-left {
       left: -1.625rem;
       object-fit: cover;
-      bottom: 3.5625rem;
+      top: 3.5625rem;
     }
 
     .img-right {
       order: 3;
       right: -1.625rem;
       object-fit: cover;
-      top: 3.5625rem;
+      bottom: 3.5625rem;
     }
 
     .text-hero {
@@ -282,15 +282,16 @@ body {
 .footer {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   .number-line {
     position: relative;
     z-index: 3;
+    margin-bottom: -1.6875rem;
   }
 
   .footer-content {
     position: relative;
-    margin-top: -1.6875rem;
 
     &::before {
       content: "";
