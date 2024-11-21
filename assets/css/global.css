@@ -20,6 +20,8 @@
 
 body {
   font-family: var(--font-primary);
+  width: 100%;
+  height: 100%;
 }
 
 /* Global Styles */
@@ -136,7 +138,7 @@ body {
 }
 @media (min-width: 70rem) {
   .header {
-    padding: 5rem;
+    padding-top: 5rem;
   }
 }
 
@@ -256,6 +258,7 @@ body {
 /* Footer */
 .footer {
   width: 100%;
+  height: 100%;
 }
 .footer .number-line {
   position: relative;
@@ -313,7 +316,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
-    padding: 7rem 5rem;
+    padding: 7rem 2rem;
     max-width: 70rem;
     margin: 0 auto;
   }
